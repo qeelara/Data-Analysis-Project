@@ -6,13 +6,14 @@ This data analysis project aims to provide insights into the sales performance o
 
 ### Data Sources
 
-Sales Data: The primary data set used for this analysis is the " file ", containing detailed information about each sales made by the company.
+Sales Data: The primary data set used for this analysis is the "aqilah humaira capstone project.xlsb", containing detailed information about each sales made by the company.
 
 ### Tools
 
 - Excel - Data Cleaning
 - SQL server - Data Manipulation
 - Tableau - Data Visualization
+  - [Tableau Public](https://public.tableau.com/app/profile/aqilah.humaira.saiful.bahri8272/viz/AqilahHumairaCapstoneProject/SuperstoreSalesPerformance?publish=yes)
 
 ### Data Cleaning/Preparation
 
@@ -38,13 +39,16 @@ In the initial phase of data preparation, we performed the following task:
 - Which customer segment contributed to the highest sales?
 - Are there any patterns in shipping modes across different regions
 - Are there any products with consistently low sales that may need attention?
-- which state has the highest number of sales?
+- Which state has the highest number of sales?
 
 
 ### Data Analysis
 
 ```sql
-xxx
+SELECT ship_mode,
+COUNT (*) order_per_ship_mode
+FROM orders
+GROUP BY 1;
 ```
 
 ### Results/Findings
@@ -57,7 +61,7 @@ The analysis results are summarized as follows:
 5. Consumer segment is responsible for the majority of sales growth
 6. Standard class is the most preferred shipping mode
 7. Chairs and Phones are consistent top-selling products while Fasteners, Labels, Art and Envelopes show consistently low sales over the year
-8. the state with the highest number of sales is California
+8. The state with the highest number of sales is California
 
 ### Recommendations
 
@@ -73,4 +77,4 @@ Based on the analysis, we recommed the following actions:
 
 ### Limitations
 
-I had to remove all zero values from budget and revenue columns because the y would have affected the accuracy of my conclusions from the analysis. There are still a few ooutliers even after the ommissions but even then we can still see that there is a positive correlation between bothh budget and number of votes with revenue.
+I had to remove all blanks values because they would have affected the accuracy of my conclusions from the analysis. 
